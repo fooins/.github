@@ -1,12 +1,13 @@
-## Hi there 👋
+## 成立初期
 
-<!--
+**业务概况**：福保成立初期，主要为各类电商平台提供 “买家退货运费险” 和 “买家账户安全险” 等保险产品。前期总单量大约 1 万单/天，高峰期大约为 1 单/秒。[详情>>](./成立初期业务梳理.md)
 
-**Here are some ideas to get you started:**
+**系统概况**：主要开发了两个系统，一个是提供前端电商平台接入的 “保险业务系统”，纯 API 接入没有界面；另一个是面向内部人员的 “运营管理系统”，支撑日常的运营和管理工作。[详情>>](./成立初期系统设计.md)
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+## 业务倍增
+
+...
+
+## 业务扩展
+
+...
