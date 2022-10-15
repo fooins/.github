@@ -1,0 +1,23 @@
+CREATE TABLE `policies` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `orderNo` varchar(64) NOT NULL COMMENT '订单号',
+  `policyNo` varchar(64) NOT NULL COMMENT '保单号',
+  `endorseNo` varchar(5) NOT NULL DEFAULT '000' COMMENT '批单号',
+  `producerId` int NOT NULL COMMENT '所属渠道ID',
+  `contractId` int NOT NULL COMMENT '所属契约ID',
+  `contractVersion` int NOT NULL COMMENT '所属契约版本',
+  `productId` int NOT NULL COMMENT '关联产品ID',
+  `productVersion` int NOT NULL COMMENT '关联产品版本号',
+  `planId` int NOT NULL COMMENT '关联计划ID',
+  `bizConfig` text COMMENT '业务规则配置(JSON格式)',
+  `effectiveTime` datetime NOT NULL COMMENT '保单生效时间',
+  `expiryTime` datetime NOT NULL COMMENT '保单终止时间',
+  `boundTime` datetime NOT NULL COMMENT '承保时间',
+  `premium` float NOT NULL COMMENT '总保费',
+  `status` enum('valid', 'canceled') NOT NULL DEFAULT 'valid' COMMENT '状态',
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `policyNo` (`policyNo`),
+  UNIQUE KEY `uni_order_no_producer` (`orderNo`, `producerId`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '保单表'
