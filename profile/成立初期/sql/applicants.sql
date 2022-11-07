@@ -12,5 +12,6 @@ CREATE TABLE `applicants` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `no` (`no`)
+  UNIQUE KEY `no` (`no`),
+  KEY `applicants_policy_id` (`policyId`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '投保人表'

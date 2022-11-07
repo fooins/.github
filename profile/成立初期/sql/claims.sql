@@ -9,5 +9,6 @@ CREATE TABLE `claims` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `claimNo` (`claimNo`)
+  UNIQUE KEY `claimNo` (`claimNo`),
+  KEY `claims_policy_id` (`policyId`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '理赔单表'

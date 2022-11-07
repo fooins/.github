@@ -14,5 +14,7 @@ CREATE TABLE `insureds` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `no` (`no`)
+  UNIQUE KEY `no` (`no`),
+  KEY `insureds_policy_id` (`policyId`),
+  KEY `insureds_id_no_name_id_type` (`idNo`, `name`, `idType`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '被保险人表'
